@@ -1,15 +1,27 @@
-<html>
-<p1> Welcome to my website southlaw automating mundane legal tasks </p>
-<p2> it will only take you a .2 to read this site but you will end up billing a 2.2 </p> 
-</html>
-
-
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Welcome to SouthLaw automating mundane legal tasks</title>
-        <p1> Welcome to my website southlaw automating mundane legal tasks </p>
-  </head>
-</html>
+</head>
+<body>
+    <h1>SouthLaw: Automating Mundane Legal Tasks</h1>
+    <p>Welcome! It will only take you 0.2 seconds to read this site, but you'll end up billing a 2.2.</p>
 
+    <!-- Add the form element here -->
+    <form action="/submit" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Add a message to display the submitted data -->
+    {% if form_data %}
+        <h2>Thank you for submitting your information!</h2>
+        <p>Your name is {{ form_data.name }} and your email address is {{ form_data.email }}.</p>
+    {% endif %}
+
+</body>
+</html>
 
